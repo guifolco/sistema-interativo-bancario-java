@@ -1,4 +1,4 @@
-<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/1489666d-b8b3-4efb-b83d-a8bf6421706b" /># 🏦 Sistema Bancário Interativo em Java (POO)
+# 🏦 Sistema Bancário Interativo em Java (POO)
 
 ![Java](https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=java)
 
