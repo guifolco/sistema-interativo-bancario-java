@@ -8,7 +8,6 @@ Este projeto é uma **aplicação de console interativa** que simula as operaç�
 
 O principal objetivo deste projeto é a aplicação prática dos pilares da Programação Orientada a Objetos (**Herança**, **Polimorfismo** e **Encapsulamento**) em um ambiente dinâmico e interativo, criando um sistema coeso, organizado e que gerencia o estado da aplicação em tempo de execução.
 
-## 📸 Screenshots da Aplicação
 
 
 
