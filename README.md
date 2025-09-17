@@ -1,4 +1,4 @@
-# 🏦 Sistema Bancário Interativo em Java (POO)
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/1489666d-b8b3-4efb-b83d-a8bf6421706b" /># 🏦 Sistema Bancário Interativo em Java (POO)
 
 ![Java](https://img.shields.io/badge/Java-17%2B-orange?style=for-the-badge&logo=java)
 
@@ -48,7 +48,7 @@ O principal objetivo deste projeto é a aplicação prática dos pilares da Prog
 2.  **Clone o Repositório:**
     ```bash
     # Substitua pela URL HTTPS do seu repositório
-    git clone [https://github.com/seu-usuario/sistema-bancario-interativo-java.git](https://github.com/seu-usuario/sistema-bancario-interativo-java.git)
+    git clone [https://github.com/guifolco/sistema-interativo-bancario-java](https://github.com/guifolco/sistema-interativo-bancario-java)
     ```
 
 3.  **Navegue até a Pasta do Projeto:**
@@ -76,6 +76,6 @@ O principal objetivo deste projeto é a aplicação prática dos pilares da Prog
 
 ## ✒️ Autor
 
-Desenvolvido por **[Seu Nome Completo]**
+Desenvolvido por **Guilherme Folco Lima**
 
-[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/seu-usuario-do-linkedin/)
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/guilherme-folco-lima-a5a451243/)
