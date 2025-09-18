@@ -46,7 +46,6 @@ O principal objetivo deste projeto é a aplicação prática dos pilares da Prog
 
 2.  **Clone o Repositório:**
     ```bash
-    # Substitua pela URL HTTPS do seu repositório
     git clone [https://github.com/guifolco/sistema-interativo-bancario-java](https://github.com/guifolco/sistema-interativo-bancario-java)
     ```
 
