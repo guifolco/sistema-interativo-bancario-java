@@ -15,7 +15,7 @@ public class ContaCorrente extends Conta {
             if (novoSaldo < 0) {
                 System.out.println("Atenção: Você está utilizando o cheque especial.");
             }
-            setSaldo(novoSaldo); // Usamos o método protegido para alterar o saldo
+            setSaldo(novoSaldo);
             System.out.println("Saque de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
             return true;
         } else {
