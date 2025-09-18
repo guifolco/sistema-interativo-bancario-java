@@ -3,8 +3,6 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-// Supondo que suas classes Conta, ContaCorrente e ContaPoupanca estão no mesmo pacote (ou importadas)
-// Lembre-se que as classes de Conta que corrigimos são necessárias para este código funcionar.
 
 public class App {
 
@@ -13,7 +11,6 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         List<Conta> contasDoBanco = new ArrayList<>();
 
-        // Adicionando algumas contas para teste inicial, para não começar do zero
         contasDoBanco.add(new ContaCorrente("Bruce Wayne", "CC-001"));
         contasDoBanco.get(0).depositar(10000.00);
         contasDoBanco.add(new ContaPoupanca("Clark Kent", "CP-001"));
@@ -25,15 +22,14 @@ public class App {
             exibirMenuPrincipal();
             int opcao = 0;
 
-            // Tratamento de erro para caso o usuário digite texto em vez de número
             try {
                 opcao = scanner.nextInt();
             } catch (InputMismatchException e) {
                 System.out.println("Erro: Por favor, digite um número válido.");
-                scanner.next(); // Limpa a entrada inválida do scanner
-                continue; // Pula para a próxima iteração do loop
+                scanner.next();
+                continue;
             }
-            scanner.nextLine(); // Limpa o buffer do scanner
+            scanner.nextLine();
 
             // --- ROTEADOR DE OPÇÕES ---
             switch (opcao) {
@@ -48,8 +44,8 @@ public class App {
                     break;
                 case 4:
                     System.out.println("Obrigado por utilizar o sistema. Encerrando...");
-                    scanner.close(); // Fecha o scanner antes de sair
-                    return; // Encerra o método main e, consequentemente, o programa
+                    scanner.close();
+                    return;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
                     break;
@@ -77,7 +73,7 @@ public class App {
 
         System.out.print("Qual o tipo da conta? (1 - Corrente, 2 - Poupança): ");
         int tipo = scanner.nextInt();
-        scanner.nextLine(); // Limpa o buffer
+        scanner.nextLine(); 
 
         Conta novaConta = null;
         if (tipo == 1) {
@@ -119,7 +115,6 @@ public class App {
             System.out.println("1 - Depositar");
             System.out.println("2 - Sacar");
             
-            // Lógica para mostrar opção extra APENAS para Conta Poupança
             if (conta instanceof ContaPoupanca) {
                 System.out.println("3 - Aplicar Rendimento");
                 System.out.println("4 - Voltar ao Menu Principal");
@@ -128,11 +123,10 @@ public class App {
             }
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpa o buffer
+            scanner.nextLine();
 
-            // Se for Conta Corrente, a opção 3 é "Voltar"
             if (!(conta instanceof ContaPoupanca) && opcao == 3) {
-                break; // Sai do loop do sub-menu
+                break; 
             }
             
             switch (opcao) {
@@ -148,17 +142,16 @@ public class App {
                     scanner.nextLine();
                     conta.sacar(valorSaque);
                     break;
-                case 3: // Esta opção só é válida se for Conta Poupança
-                    if (conta instanceof ContaPoupanca) {
-                        // Fazemos um "cast" para acessar o método específico da ContaPoupanca
+                case 3:
+                    if (conta instanceof ContaPoupanca) {                        
                         ((ContaPoupanca) conta).aplicarRendimento();
                     } else {
                         System.out.println("Opção inválida.");
                     }
                     break;
-                case 4: // Esta opção só existe se for Conta Poupança
+                case 4:
                     if (conta instanceof ContaPoupanca) {
-                        break; // Sai do loop do sub-menu
+                        break;
                     } else {
                         System.out.println("Opção inválida.");
                     }
@@ -166,7 +159,6 @@ public class App {
                     System.out.println("Opção inválida.");
                     break;
             }
-            // Se a opção de voltar foi escolhida (break), o while(true) é quebrado
             if (opcao == 4 || (!(conta instanceof ContaPoupanca) && opcao == 3)) {
                 break;
             }
@@ -180,7 +172,6 @@ public class App {
             return;
         }
         for (Conta conta : contas) {
-            // Usando o toString() que já definimos antes!
             System.out.printf("Conta: %s, Titular: %s, Saldo: R$ %.2f\n", 
                 conta.getNumero(), conta.getTitular(), conta.getSaldo());
         }
